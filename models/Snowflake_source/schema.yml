@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: Snowflake_FIVETRAN_INTERVIEW_DB
+    description: 'Source database'
+    database: FIVETRAN_INTERVIEW_DB
+    schema: GOOGLE_SHEETS
+    tables:
+      - name: COVID_19_INDONESIA_NISHANT_KUMAR
+      
