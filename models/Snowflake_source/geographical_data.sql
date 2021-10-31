@@ -1,0 +1,10 @@
+With src_data as (
+SELECT DISTINCT 
+LOCATION_ISO_CODE, LOCATION, LOCATION_LEVEL, PROVINCE, ISLAND, COUNTRY, CONTINENT, LONGITUDE, LATITUDE
+from {{ source('Snowflake_FIVETRAN_INTERVIEW_DB', 'COVID_19_INDONESIA_NISHANT_KUMAR') }}
+),
+
+final as (
+    select * from src_data
+)
+select * from final

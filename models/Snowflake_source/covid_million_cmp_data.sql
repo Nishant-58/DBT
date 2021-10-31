@@ -1,0 +1,9 @@
+With src_data as (
+SELECT DISTINCT DATE, LOCATION_ISO_CODE, TOTAL_CASES_PER_MILLION,NEW_CASES_PER_MILLION ,NEW_DEATHS_PER_MILLION ,TOTAL_DEATHS_PER_MILLION
+from {{ source('Snowflake_FIVETRAN_INTERVIEW_DB', 'COVID_19_INDONESIA_NISHANT_KUMAR') }}
+),
+
+final as (
+    select * from src_data
+)
+select * from final
